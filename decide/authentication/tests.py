@@ -26,6 +26,7 @@ class AuthTestCase(APITestCase):
         self.client = None
 
     def test_login(self):
+        self.assertEqual(1,2)
         data = {'username': 'voter1', 'password': '123'}
         response = self.client.post('/authentication/login/', data, format='json')
         self.assertEqual(response.status_code, 200)
